@@ -17,9 +17,9 @@
     <view>{{item.attributes.age}}</view>
   </block>
   -->
-
-  <block wx:for="{{userList}}">
-    <view> {{index}}=== </view>
-    <view> {{item}} </view>
-  </block>
+  
+  <view wx:for="{{userList}}" wx:key="{{index}}">
+    <view>{{item.name}} </view>
+    <view> {{item.age}} </view>
+  </view>
 </view>

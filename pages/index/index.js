@@ -9,7 +9,6 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     userList: []
-
   },
   // 事件处理函数
   bindViewTap: function () {
@@ -47,24 +46,16 @@ Page({
     // }
 
     var query = new app.globalData.AV.Query('userList')
-    query.find().then(function (results) {
+    query.find().then((results) => {
       let newRes = []
-
-      console.info('==0==', results)
-
       results.forEach(item => {
-        console.info('==2==', item.attributes)
         newRes.push(item.attributes)
       })
-
-      console.info('==1==', newRes)
 
       this.setData({
         userList: newRes
       })
-    
-
-    }, function (error) {
+    }, (error) => {
       this.setData({
         userList: []
       })
