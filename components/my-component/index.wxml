@@ -1,0 +1,7 @@
+<view class="inner" class="{{component-class}}">
+  <slot name="before"></slot>
+  {{innerText}}
+  <slot name="after"></slot>
+
+  <button bindtap="handleTap">click trigger event</button>
+</view>

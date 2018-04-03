@@ -1,0 +1,32 @@
+<!--
+<view>{{text}}</view>
+<button bindtap="changeText"> Change normal data </button>
+<view>{{num}}</view>
+<button bindtap="changeNum"> Change normal num </button>
+<view>{{array[0].text}}</view>
+<button bindtap="changeItemInArray"> Change Array data </button>
+<view>{{object.text}}</view>
+<button bindtap="changeItemInObject"> Change Object data </button>
+<view>{{newField.text}}</view>
+<button bindtap="addNewField"> Add new data </button>
+-->
+
+<my-component inner-text="{{text}}" component-class="component-class-gray" bind:myevent="onMyEvent">
+  <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+  <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+</my-component>
+
+<navigator url="/pages/index/index" open-type="switchTab">goto logs</navigator>
+
+<template name="testTmep">
+  <view>test data: {{name}},{{age}}</view>
+</template>
+
+<template is="testTmep" data="{{name: 'xhangeyi', age: '50'}}"></template>
+<button bindtap="changeStyle">change style</button>
+<view class="{{className}}">color panel</view>
+
+<checkbox checked="{{false}}"> </checkbox>
+
+<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+<view wx:if="{{true}}">hidden element</view>

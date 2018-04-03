@@ -1,5 +1,6 @@
 {
 	"description": "测试小程序的相关功能",
+	"miniprogramRoot": ".",
 	"setting": {
 		"urlCheck": true,
 		"es6": true,

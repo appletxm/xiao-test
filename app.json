@@ -1,10 +1,13 @@
 {
   "pages":[
+    "pages/test/index",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/tools/index",
+    "components/my-component/index"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"#fff",
@@ -16,24 +19,37 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "assets/imgs/homepage_2.png",
-        "selectedIconPath": "assets/imgs/homepage_1.png"
+        "iconPath": "assets/imgs/homepage_1.png",
+        "selectedIconPath": "assets/imgs/homepage_2.png"
+      },
+      {
+        "pagePath": "pages/test/index",
+        "text": "测试",
+        "iconPath": "assets/imgs/lab_1.png",
+        "selectedIconPath": "assets/imgs/lab_2.png"
       },
       {
         "pagePath": "pages/logs/logs",
         "text": "日志",
-        "iconPath": "assets/imgs/log_2.png",
-        "selectedIconPath": "assets/imgs/log_1.png"
+        "iconPath": "assets/imgs/log_1.png",
+        "selectedIconPath": "assets/imgs/log_2.png"
+      },
+      {
+        "pagePath": "pages/tools/index",
+        "text": "测试WXS",
+        "iconPath": "assets/imgs/log_1.png",
+        "selectedIconPath": "assets/imgs/log_2.png"
       }
     ],
-    "color": "#f00",
-    "selectedColor": "#fff",
-    "backgroundColor": "#999",
+    "color": "#fff",
+    "selectedColor": "#e0620d",
+    "backgroundColor": "#000",
     "borderStyle": "white"
   },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
   },
+  "workers": "./workers",
   "debug": true
 }

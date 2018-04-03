@@ -1,0 +1,6 @@
+<wxs src="./logic.wxs" module="logic" />
+<view>{{logic.msg}}</view>
+<template name="userInfo">
+  <view>name: {{name}}, age: {{age}}</view>
+</template>
+<template is="userInfo" data="{{...logic.userInfo}}" />

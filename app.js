@@ -1,6 +1,6 @@
-//app.js
+// app.js
 const AV = require('./libs/av-weapp-min.js')
-const{ Query, User } = AV
+const { Query, User } = AV
 const { Realtime, TextMessage } = require('./libs/realtime.weapp.min.js')
 
 AV.init('4Qz6dyES6vE3Kpg697wMBVE9-gzGzoHsz', 'Gl2os9YwS1b1l92NHpQAo8xV')
@@ -48,17 +48,25 @@ App({
     //   mask: true
     // })
 
-    // var TestObject = AV.Object.extend('TestObject');
-    // var testObject = new TestObject();
+    // var TestObject = AV.Object.extend('TestObject')
+    // var testObject = new TestObject()
     // testObject.save({
     //   words: 'Hello World!'
     // }).then(function (object) {
-    //   alert('LeanCloud Rocks!');
+    //   alert('LeanCloud Rocks!')
     // })
-    
+
+  },
+  onShow() {
+    console.info('***app start')
+  },
+  onHide() {
+    console.info('***app hide')
+  },
+  onError() {
+    console.info('***app error')
   },
   globalData: {
     userInfo: null,
-    AV
-  }
+  AV}
 })
