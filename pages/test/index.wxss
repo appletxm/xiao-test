@@ -33,3 +33,29 @@
 .component-class-gray{
   background-color: gray;
 }
+
+.hover-parent{
+  padding: 5rpx;
+  display: flex;
+  justify-content: left;
+  width: 100%;
+}
+
+.hover-class{
+  background: purple;
+  color: #fff;
+  width: 100%;
+  height: 50rpx;
+  flex: 25%;
+}
+
+.image-box{
+  width: 100%;
+}
+.hover-image{
+  width: 100%;
+}
+.hover-image-small{
+  width: 200rpx;
+  height: 200rpx;
+}

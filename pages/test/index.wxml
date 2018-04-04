@@ -11,22 +11,57 @@
 <button bindtap="addNewField"> Add new data </button>
 -->
 
-<my-component inner-text="{{text}}" component-class="component-class-gray" bind:myevent="onMyEvent">
-  <view slot="before">这里是插入到组件slot name="before"中的内容</view>
-  <view slot="after">这里是插入到组件slot name="after"中的内容</view>
-</my-component>
+<view class="container">
+  <my-component inner-text="{{text}}" component-class="component-class-gray" bind:myevent="onMyEvent">
+    <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+    <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+  </my-component>
 
-<navigator url="/pages/index/index" open-type="switchTab">goto logs</navigator>
+  <navigator url="/pages/index/index" open-type="switchTab">goto logs</navigator>
 
-<template name="testTmep">
-  <view>test data: {{name}},{{age}}</view>
-</template>
+  <template name="testTmep">
+    <view>test data: {{name}},{{age}}</view>
+  </template>
 
-<template is="testTmep" data="{{name: 'xhangeyi', age: '50'}}"></template>
-<button bindtap="changeStyle">change style</button>
-<view class="{{className}}">color panel</view>
+  <template is="testTmep" data="{{name: 'xhangeyi', age: '50'}}"></template>
+  <button bindtap="changeStyle">change style</button>
+  <view class="{{className}}">color panel</view>
 
-<checkbox checked="{{false}}"> </checkbox>
+  <checkbox checked="{{false}}"> </checkbox>
 
-<switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
-<view wx:if="{{true}}">hidden element</view>
+  <switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+  <view wx:if="{{true}}">hidden element</view>
+
+  <view class="hover-parent">
+    <view hover-class="hover-class" hover-start-time="1000" hover-stay-time="1000">test hover</view>
+    <view hover-class="hover-class" hover-start-time="1000" hover-stay-time="1000">test hover</view>
+    <view hover-class="hover-class" hover-start-time="1000" hover-stay-time="1000">test hover</view>
+    <view hover-class="hover-class" hover-start-time="1000" hover-stay-time="1000">test hover</view>
+  </view>
+
+<!--
+  <view class="image-box">
+    <image class="hover-image" src="../../assets/imgs/2.jpg" lazy-load="true" mode="widthFix" width="100%" />
+  </view>
+-->
+  <view class="image-box">
+    <image class="hover-image-small" src="../../assets/imgs/lab_2.png" lazy-load="true"/>
+  </view>
+</view>
+
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> duration
+
+<icon type="success" size="40" color="{{item}}"/>
+
+<map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
