@@ -1,0 +1,23 @@
+<wxs src="./logic.wxs" module="logic" />
+
+<view>{{logic.msg}}</view>
+
+<template name="userInfo">
+  <view>name: {{name}}, age: {{age}}</view>
+</template>
+
+<template is="userInfo" data="{{...logic.userInfo}}" />
+
+<button bindtap="chooseImage">choose image</button>
+
+<button bindtap="getLocaltion">get location</button>
+
+<button bindtap="chooseLocaltion">choose location</button>
+
+<!--
+
+
+<button bindTap="getLocaltion">get location</button>
+
+<button bindTap="chooseLocaltion">choose location</button>
+-->
