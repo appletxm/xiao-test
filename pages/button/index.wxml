@@ -1,0 +1,5 @@
+<view class='container'>
+  <button bindtap='bindViewTap'>
+    to logs page
+  </button>
+</view>

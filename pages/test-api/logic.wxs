@@ -1,0 +1,14 @@
+var tools = require("./tools.wxs")
+console.log(tools.FOO)
+console.log(tools.bar("logic.wxs"))
+console.log(tools.msg)
+
+var some_msg = "message from logic wxs";
+module.exports = {
+  msg : some_msg,
+}
+
+module.exports.userInfo = {
+  name: 'piapple',
+  age: '90'
+}

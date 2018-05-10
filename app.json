@@ -1,9 +1,11 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/test-api/index",
     "pages/test/index",
     "pages/logs/logs",
     "pages/tools/index",
+    "pages/button/index",
     "components/my-component/index"
   ],
   "window":{
@@ -17,6 +19,12 @@
   },
   "tabBar": {
     "list": [
+      {
+        "pagePath": "pages/test-api/index",
+        "text": "测试API",
+        "iconPath": "assets/imgs/log_1.png",
+        "selectedIconPath": "assets/imgs/log_2.png"
+      },
       {
         "pagePath": "pages/index/index",
         "text": "首页",

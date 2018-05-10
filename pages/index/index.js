@@ -74,7 +74,7 @@ Page({
     console.info('111111111')
     console.info(wx.navigateTo)
     wx.navigateTo({
-      url: '/components/my-component/index',
+      url: '/pages/button/index',
       success() {
         console.info('loading success')
       },
