@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/test/index",
     "pages/index/index",
+    "pages/test/index",
     "pages/logs/logs",
     "pages/tools/index",
     "components/my-component/index"
@@ -9,10 +9,11 @@
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "***WeChat****",
     "navigationBarTextStyle":"#fff",
     "onReachBottomDistance": 50,
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": true,
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "list": [

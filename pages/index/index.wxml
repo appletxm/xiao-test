@@ -22,4 +22,6 @@
     <view>{{item.name}} </view>
     <view> {{item.age}} </view>
   </view>
+
+  <button bindtap="$changeLocation">navigator</button>
 </view>

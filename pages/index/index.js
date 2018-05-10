@@ -68,5 +68,22 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  $changeLocation() {
+    console.info('111111111')
+    console.info(wx.navigateTo)
+    wx.navigateTo({
+      url: '/components/my-component/index',
+      success() {
+        console.info('loading success')
+      },
+      fail() {
+        console.info('loading failed')
+      },
+      complete() {
+        console.info('loading complete')
+      }
+    })
   }
 })
